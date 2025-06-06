@@ -1,0 +1,38 @@
+<div class="row g-4">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3"
+       *ngFor="let obj of (listaFiltrada.length > 0 ? listaFiltrada : lista); let i = index">
+    <div class="card h-100 shadow-sm produto-card"
+         #cardElement
+         [@fadeInOnScroll]="visibilidade[i] ? 'visible' : 'hidden'"
+         [attr.data-index]="i">
+         
+      <img [src]="'./assets/foto' + obj.codigo + '.jpg'" 
+           class="card-img-top produto-imagem" 
+           alt="{{obj.nome}}">
+
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{ obj.nome }}</h5>
+
+        <div *ngIf="obj.quantidade > 0" class="text-success fw-bold">
+          R$ {{ obj.valor }}
+        </div>
+
+        <div *ngIf="obj.quantidade <= 0" class="text-danger fw-bold">
+          Sem Estoque
+        </div>
+
+        <div class="mt-auto d-flex flex-wrap gap-2 pt-3">
+          <button class="btn btn-detalhe btn-sm flex-fill" (click)="verDetalhe(obj)">
+            + Detalhes
+          </button>
+          <button class="btn btn-comprar btn-sm flex-fill"
+                  (click)="adicionar(obj)"
+                  [disabled]="obj.quantidade <= 0">
+            Comprar
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

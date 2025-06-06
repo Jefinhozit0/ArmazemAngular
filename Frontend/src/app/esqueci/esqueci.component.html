@@ -1,0 +1,25 @@
+<div class="recuperar-senha container mt-5">
+  <h3 class="mb-4 text-center">Esqueci minha senha</h3>
+
+  <div class="alert alert-info" *ngIf="mensagem.length > 0">
+    {{ mensagem }}
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email:</label>
+    <input
+      type="email"
+      [(ngModel)]="obj.email"
+      id="email"
+      class="form-control"
+      placeholder="Digite seu e-mail"
+    />
+  </div>
+
+  <div class="d-grid">
+    <button class="btn btn-reenviar" (click)="reenviarSenha()">
+  Reenviar lembrete de senha
+</button>
+
+  </div>
+</div>

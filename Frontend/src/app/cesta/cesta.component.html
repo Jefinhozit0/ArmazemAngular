@@ -1,0 +1,49 @@
+<div class="container mt-5 cesta-compras p-4 bg-white rounded shadow">
+<h3 class="text-center mb-4">Cesta de Compras</h3>
+
+
+  <div *ngIf="mensagem" class="alert alert-info text-center fw-bold">
+    {{ mensagem }}
+  </div>
+
+  <table class="table table-hover align-middle" *ngIf="cesta.total > 0">
+    <thead class="table-secondary">
+      <tr>
+        <th></th>
+        <th>Produto</th>
+        <th>Valor</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let x of cesta.itens; index as i">
+        <td>
+          <img [src]="'./assets/foto' + x.codigo + '.jpg'" width="50px" class="img-thumbnail" />
+        </td>
+        <td>
+          <strong>{{ x.nome }}</strong><br />
+          <small class="text-muted">{{ x.descritivo }}</small>
+        </td>
+        <td class="text-success fw-bold">R$ {{ x.valor }}</td>
+        <td>
+          <button class="btn btn-sm btn-outline-danger" (click)="removerItem(i)">
+            Remover
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="table-light">
+        <td colspan="2" class="text-end fw-bold">Total:</td>
+        <td class="text-success fw-bold">R$ {{ cesta.total }}</td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="mt-4 d-flex flex-wrap gap-2">
+    <button class="btn btn-danger" *ngIf="cesta.total > 0" (click)="limpar()">Limpar Cesta</button>
+    <button class="btn btn-secondary" (click)="continuar()">Continuar Comprando</button>
+    <button class="btn btn-primary" *ngIf="cesta.total > 0">Finalizar Compra</button>
+  </div>
+</div>

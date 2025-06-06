@@ -1,0 +1,55 @@
+/* Container da recuperação */
+.recuperar-senha {
+  max-width: 450px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Título */
+.recuperar-senha h3 {
+  font-weight: bold;
+  color: #1f1f1f;
+  text-transform: uppercase;
+}
+
+/* Label */
+.recuperar-senha .form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input */
+.recuperar-senha .form-control {
+  border: 2px solid #aaa;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.recuperar-senha .form-control:focus {
+  border-color: #d97706;
+  box-shadow: none;
+}
+
+/* Alerta */
+.alert-info {
+  background-color: #e3f2fd;
+  border-left: 5px solid #d97706;
+  color: #d97706;
+  font-weight: 500;
+}
+
+/* Botão "Reenviar lembrete de senha" */
+.btn-reenviar {
+  background-color: #d97706;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-reenviar:hover {
+  background-color: #b45309;
+}

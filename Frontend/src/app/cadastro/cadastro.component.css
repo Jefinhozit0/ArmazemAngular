@@ -1,0 +1,50 @@
+.cadastro-cliente {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.cadastro-cliente h3 {
+  color: #1f2937; /* cinza escuro */
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Inputs */
+.cadastro-cliente .form-control {
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  transition: border-color 0.2s;
+}
+
+.cadastro-cliente .form-control:focus {
+  border-color: #d97706;
+  box-shadow: none;
+}
+
+/* Alerta */
+.cadastro-cliente .alert {
+  background-color: #dcfce7;
+  color: #000000;
+  border: 1px solid #bbf7d0;
+  font-weight: 500;
+}
+
+/* Botão Gravar */
+.cadastro-cliente .btn {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cadastro-cliente .btn-success {
+  background-color: #d97706; /* verde escuro */
+  border: none;
+}
+
+.cadastro-cliente .btn-success:hover {
+  background-color: #d97706;
+}

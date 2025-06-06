@@ -1,0 +1,55 @@
+/* Reset básico */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Cabeçalho */
+.main-header {
+  background-color: #f0f0f0;
+  border-bottom: 3px solid #d4a017; /* amarelo forte estilo construção */
+}
+
+.logo {
+  height: 100px;
+  object-fit: contain;
+}
+
+
+/* Pesquisa */
+app-pesquisa {
+  max-width: 400px;
+}
+
+/* Navegação */
+.nav-menu .nav-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-menu .nav-link:hover {
+  background-color: #d4a017;
+  color: #fff;
+}
+
+/* Conteúdo */
+.content-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Rodapé */
+.main-footer {
+  background-color: #1f1f1f;
+  color: #f8f9fa;
+  font-size: 0.9rem;
+  border-top: 3px solid #d4a017;
+}

@@ -1,0 +1,47 @@
+/* Exemplo de personalização global */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* cinza claro do Bootstrap */
+  color: #212529; /* cor padrão do Bootstrap */
+}
+
+/* Personalizar links com cores do Bootstrap */
+a {
+  color: #0d6efd;
+}
+
+a:hover {
+  color: #0a58ca;
+  text-decoration: underline;
+}
+
+/* Botões customizados para ter borda arredondada */
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0a58ca;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+}
+
+/* Inputs com foco personalizado */
+.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* Container padrão para centralizar e limitar largura */
+.container {
+  max-width: 1140px;
+}
+
+/* Responsividade já gerenciada pelo Bootstrap, mas pode personalizar */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}

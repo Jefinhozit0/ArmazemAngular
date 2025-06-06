@@ -1,0 +1,24 @@
+<div class="login-container container mt-5">
+  <h3 class="mb-4">Login</h3>
+
+  <div class="alert alert-warning" *ngIf="mensagem.length > 0">
+    {{ mensagem }}
+  </div>
+
+  <div class="mb-3">
+    <label for="email" class="form-label">Email:</label>
+    <input type="email" [(ngModel)]="obj.email" id="email" class="form-control">
+  </div>
+
+  <div class="mb-3">
+    <label for="senha" class="form-label">Senha:</label>
+    <input type="password" [(ngModel)]="obj.senha" id="senha" class="form-control">
+  </div>
+
+  <div class="d-grid gap-2 d-md-block">
+    <button (click)="fazerLogin();" class="btn btn-entrar me-2">Entrar</button>
+<a href="esqueci" class="btn btn-esqueci">Esqueci minha senha</a>
+
+<div class="mt-4">
+  <a href="cadastro" class="btn btn-cadastro w-100">Ainda não tenho cadastro</a>
+</div>

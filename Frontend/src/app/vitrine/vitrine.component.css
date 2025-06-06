@@ -1,0 +1,39 @@
+/* Botões gerais */
+.btn {
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 12px;
+}
+
+/* Botão de detalhes (ex: botão neutro forte) */
+.btn-detalhe {
+  background-color: #555; /* cinza escuro */
+  color: #fff;
+}
+
+.btn-detalhe:hover {
+  background-color: #333;
+}
+
+/* Botão de comprar (destaque amarelo queimado/laranja construção) */
+.btn-comprar {
+  background-color: #d97706; /* laranja escuro */
+  color: #fff;
+}
+
+.btn-comprar:hover {
+  background-color: #b45309;
+}
+
+/* Botão desativado */
+.btn:disabled,
+.btn[disabled] {
+  background-color: #999 !important;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.text-success {
+  color: #b45309;
+}

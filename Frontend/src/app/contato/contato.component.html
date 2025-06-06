@@ -1,0 +1,77 @@
+<div class="container contato-form mt-5 p-4 shadow rounded bg-white">
+<h3 class="mb-4 text-center">Entre em contato</h3>
+
+
+  <form>
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome:</label>
+      <input type="text" id="nome" class="form-control" placeholder="Digite seu nome completo" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="prioridade" class="form-label">Prioridade (1 a 5):</label>
+      <input type="number" id="prioridade" class="form-control" min="1" max="5" />
+    </div>
+
+    <div class="mb-3">
+      <label for="telefone" class="form-label">Telefone:</label>
+      <input type="text" id="telefone" class="form-control" pattern="[0-9]{4,5}-[0-9]{4}" required />
+      <div class="form-text">Formato: 99999-9999</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Deseja receber uma cópia desse email?</label><br />
+      <div class="form-check form-check-inline">
+        <input type="radio" id="OpSim" name="receber" class="form-check-input" />
+        <label for="OpSim" class="form-check-label">Sim</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="radio" id="OpNao" name="receber" class="form-check-input" />
+        <label for="OpNao" class="form-check-label">Não</label>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="assunto" class="form-label">Assunto:</label>
+      <select id="assunto" class="form-select">
+        <option>Duvidas e sugestões</option>
+        <option>Pedidos e orçamentos</option>
+        <option>Reclamações e críticas</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="msg" class="form-label">Mensagem:</label>
+      <textarea id="msg" class="form-control" rows="5" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Entrar em contato por:</label><br />
+      <div class="form-check form-check-inline">
+        <input type="checkbox" id="contato1" class="form-check-input" />
+        <label for="contato1" class="form-check-label">Telefone</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" id="contato2" class="form-check-input" />
+        <label for="contato2" class="form-check-label">WhatsApp</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" id="contato3" class="form-check-input" />
+        <label for="contato3" class="form-check-label">Carta</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input type="checkbox" id="contato4" class="form-check-input" />
+        <label for="contato4" class="form-check-label">Fax</label>
+      </div>
+    </div>
+
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </form>
+</div>

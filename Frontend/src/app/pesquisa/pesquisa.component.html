@@ -1,0 +1,10 @@
+<div class="input-group mb-4 pesquisa-box">
+  <input
+    type="text"
+    [(ngModel)]="filtro"
+    class="form-control"
+    placeholder="Informe o que deseja buscar"
+  />
+  <button class="btn btn-primary" (click)="fazerBusca()">OK</button>
+  <button class="btn btn-secondary" (click)="limparBusca()">Limpar</button>
+</div>

@@ -1,0 +1,81 @@
+/* Container do login */
+.login-container {
+  max-width: 450px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Título */
+.login-container h3 {
+  font-weight: bold;
+  color: #1f1f1f;
+  text-transform: uppercase;
+}
+
+/* Labels */
+.login-container .form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Inputs */
+.login-container .form-control {
+  border: 2px solid #aaa;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.login-container .form-control:focus {
+  border-color: #d97706;
+  box-shadow: none;
+}
+
+/* Alerta de mensagem */
+.alert-warning {
+  background-color: #fff3cd;
+  border-left: 5px solid #d97706;
+  color: #856404;
+  font-weight: 500;
+}
+
+/* Botão "Entrar" */
+.btn-entrar {
+  background-color: #1f1f1f;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-entrar:hover {
+  background-color: #000;
+}
+
+/* Botão "Esqueci minha senha" */
+.btn-esqueci {
+  background-color: #d97706;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn-esqueci:hover {
+  background-color: #b45309;
+}
+
+/* Botão "Ainda não tenho cadastro" */
+.btn-cadastro {
+  background-color: #555;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  text-transform: uppercase;
+}
+
+.btn-cadastro:hover {
+  background-color: #333;
+}

@@ -1,0 +1,48 @@
+/* Caixa de pesquisa geral */
+.pesquisa-box {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Campo de texto */
+.pesquisa-box .form-control {
+  border: 2px solid #aaa;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+  font-weight: 500;
+  background-color: #fff;
+  color: #333;
+}
+
+.pesquisa-box .form-control:focus {
+  border-color: #d97706;
+  box-shadow: none;
+}
+
+/* Botão "OK" */
+.pesquisa-box .btn-primary {
+  background-color: #d97706;
+  border: 2px solid #d97706;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+.pesquisa-box .btn-primary:hover {
+  background-color: #b45309;
+  border-color: #b45309;
+}
+
+/* Botão "Limpar" */
+.pesquisa-box .btn-secondary {
+  background-color: #555;
+  border: 2px solid #555;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0 3px 3px 0;
+}
+
+.pesquisa-box .btn-secondary:hover {
+  background-color: #333;
+  border-color: #333;
+}

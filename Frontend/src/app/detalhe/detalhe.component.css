@@ -1,0 +1,54 @@
+/* Container detalhe do produto */
+.detalhe-produto h3 {
+  font-weight: 700;
+  color: #1f1f1f; /* preto suave */
+  text-transform: uppercase;
+}
+
+
+/* Alerta */
+.alert-info {
+  background-color: #e3f2fd;
+  border-left: 5px solid #1f1f1f;
+  color: #1f1f1f;
+  font-weight: 500;
+}
+
+/* Título do produto */
+.detalhe-produto h3 {
+  font-weight: 700;
+  color: #2e3e4e; /* tom de azul escuro mais sóbrio */
+  text-transform: uppercase;
+}
+
+/* Descritivo */
+.detalhe-produto p {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Imagem */
+.detalhe-produto img {
+  border: 2px solid #ddd;
+  max-height: 300px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Preço disponível */
+.text-success {
+  font-size: 1.5rem;
+  color: #d97706 !important; /* laranja industrial forte */
+  font-weight: 700;
+}
+
+/* Sem estoque */
+.text-danger {
+  font-size: 1.3rem;
+  color: #c00 !important;
+  font-weight: 700;
+}

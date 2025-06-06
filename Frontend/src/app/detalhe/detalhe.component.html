@@ -1,0 +1,29 @@
+<div class="container detalhe-produto my-4 p-4 shadow rounded bg-white">
+  <div class="alert alert-info" *ngIf="mensagem.length > 0">
+    {{ mensagem }}
+  </div>
+
+  <h3 class="text-primary mb-4">{{ obj.nome }}</h3>
+
+  <div class="row g-4 align-items-start">
+    <div class="col-md-6 text-center">
+      <img
+        [src]="'./assets/foto' + obj.codigo + '.jpg'"
+        class="img-fluid rounded"
+        alt="{{ obj.nome }}"
+      />
+    </div>
+
+    <div class="col-md-6">
+      <p class="text-secondary">{{ obj.descritivo }}</p>
+
+      <div *ngIf="obj.quantidade > 0" class="h5 text-success fw-bold">
+         {{ obj.valor | currency:'BRL':'symbol':'1.2-2' }}
+      </div>
+
+      <div *ngIf="obj.quantidade <= 0" class="h5 text-danger fw-bold">
+        Sem Estoque
+      </div>
+    </div>
+  </div>
+</div>

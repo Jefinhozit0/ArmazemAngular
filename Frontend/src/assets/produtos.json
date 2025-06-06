@@ -1,0 +1,39 @@
+[
+    {"codigo":1, "nome":"Parafusadeira", "valor":100, "descritivo":"Parafusadeira eletrica", "quantidade":3, "promo":100,
+      "destaque":1, "keywords":""
+    },
+    {"codigo":2, "nome":"Serra", "valor":150, "descritivo":"Serra eletrica", "quantidade":3, "promo":100,
+      "destaque":1, "keywords":""
+    },
+    {"codigo":3, "nome":"Martelete", "valor":100, "descritivo":"Martelete", "quantidade":3, "promo":100,
+      "destaque":1, "keywords":""
+    },
+    {"codigo":4, "nome":"Makita", "valor":350, "descritivo":"Makita", "quantidade":2, "promo":250,
+      "destaque":1, "keywords":""
+    },
+    {"codigo":5, "nome":"Furadeira", "valor":120, "descritivo":"Furadeira de impacto", "quantidade":5, "promo":110,
+ "destaque":1, "keywords":""
+},
+{"codigo":6, "nome":"Lixadeira", "valor":90, "descritivo":"Lixadeira orbital", "quantidade":6, "promo":85,
+ "destaque":0, "keywords":""
+},
+{"codigo":7, "nome":"Esmerilhadeira", "valor":130, "descritivo":"Esmerilhadeira angular", "quantidade":4, "promo":120,
+ "destaque":1, "keywords":""
+},
+{"codigo":8, "nome":"Compressor de Ar", "valor":500, "descritivo":"Compressor 24L", "quantidade":2, "promo":450,
+ "destaque":0, "keywords":""
+},
+{"codigo":9, "nome":"Pistola de Pintura", "valor":80, "descritivo":"Pistola de pintura HVLP", "quantidade":5, "promo":70,
+ "destaque":1, "keywords":""
+},
+{"codigo":10, "nome":"Alicate de Pressão", "valor":70, "descritivo":"Alicate de pressão", "quantidade":10, "promo":45,
+ "destaque":0, "keywords":""
+},
+{"codigo":11, "nome":"Chave de Impacto", "valor":50, "descritivo":"Chave de Impacto", "quantidade":10, "promo":45,
+ "destaque":0, "keywords":""
+},
+{"codigo":12, "nome":"Multímetro Digital", "valor":20, "descritivo":"Multímetro Digital", "quantidade":10, "promo":15,
+ "destaque":0, "keywords":""
+}
+
+  ]
