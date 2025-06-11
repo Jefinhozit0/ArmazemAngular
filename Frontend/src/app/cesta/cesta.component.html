@@ -40,10 +40,9 @@
       </tr>
     </tfoot>
   </table>
-
-  <div class="mt-4 d-flex flex-wrap gap-2">
-    <button class="btn btn-danger" *ngIf="cesta.total > 0" (click)="limpar()">Limpar Cesta</button>
-    <button class="btn btn-secondary" (click)="continuar()">Continuar Comprando</button>
-    <button class="btn btn-primary" *ngIf="cesta.total > 0">Finalizar Compra</button>
-  </div>
+<div class="mt-4 d-flex flex-wrap gap-2">
+  <button class="btn btn-danger" *ngIf="cesta.total > 0" (click)="limpar()">Limpar Cesta</button>
+  <button class="btn btn-secondary" (click)="continuar()">Continuar Comprando</button>
+  
+  <button class="btn btn-primary" *ngIf="cesta.total > 0" (click)="finalizarCompra()">Finalizar Compra</button>
 </div>
