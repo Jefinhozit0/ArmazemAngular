@@ -125,4 +125,4 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 ## 👨‍💻 Autor
 
 **Jefferson** - *Jeffeson Silva de Almeida*
-* GitHub: [@seu-usuario-github](https://github.com/Jefinhozit0)
+* GitHub: [@Jefinhozit0](https://github.com/Jefinhozit0)
