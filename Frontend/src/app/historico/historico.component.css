@@ -1,0 +1,78 @@
+/* Estilo geral do container */
+.container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título centralizado e escuro */
+.container h3 {
+  color: #333333;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Spinner de carregamento */
+.spinner-border {
+  color: #6c757d; /* cinza suave */
+}
+
+/* Mensagem informativa */
+.alert-info {
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+/* Accordion */
+.accordion-item {
+  border: 1px solid #dee2e6;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* Cabeçalho do pedido (botão do accordion) */
+.accordion-button {
+  background-color: #f8f9fa;
+  font-weight: 500;
+  padding: 1rem 1.25rem;
+}
+
+/* Quando está aberto */
+.accordion-button:not(.collapsed) {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+/* Detalhes internos do pedido */
+.accordion-body {
+  background-color: #ffffff;
+  padding: 1.5rem;
+}
+
+/* Título da seção de detalhes */
+.accordion-body h6 {
+  color: #666;
+  font-weight: 600;
+}
+
+/* Lista de produtos */
+.list-group-item {
+  border: 1px solid #f1f1f1;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Badge de valor */
+.badge.bg-primary {
+  background-color: #28a745 !important; /* Verde harmonizado */
+  font-size: 0.95rem;
+  padding: 0.6em 0.8em;
+}
+
+/* Pequenas melhorias visuais */
+.text-success {
+  color: #28a745 !important;
+}
