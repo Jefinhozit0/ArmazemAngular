@@ -1,16 +1,32 @@
-<header class="main-header d-flex flex-column flex-md-row align-items-center justify-content-between p-3 shadow-sm bg-light">
-<img src="assets/logo.png" alt="Logo Armazém" class="logo">
+<header class="main-header d-flex flex-wrap align-items-center justify-content-between p-3 shadow-sm bg-light gap-3">
+  
+  <img src="assets/logo.png" alt="Logo Armazém" class="logo">
 
-  <app-pesquisa class="mb-2 mb-md-0 w-100 w-md-auto"></app-pesquisa>
+  <app-pesquisa class="flex-grow-1" style="max-width: 500px;"></app-pesquisa>
 
-  <nav class="nav-menu d-flex gap-3">
-    <a href="vitrine" class="nav-link">Catálogo</a>
-    <a href="login" class="nav-link">Cadastro</a>
-    <a href="cesta" class="nav-link">Carrinho</a>
-    <a href="contato/" class="nav-link">Contato</a>
-    <a href="historico/" class="nav-link">Meus Pedidos</a>
-
+  <nav class="nav-menu d-flex gap-3 align-items-center">
+    <a href="vitrine/" class="nav-link d-flex flex-column align-items-center text-center">
+      <i class="bi bi-book-fill fs-4"></i>
+      <span class="d-block" style="font-size: 0.75rem;">Catálogo</span>
+    </a>
+    <a href="login/" class="nav-link d-flex flex-column align-items-center text-center">
+      <i class="bi bi-person-plus-fill fs-4"></i>
+      <span class="d-block" style="font-size: 0.75rem;">Perfil</span>
+    </a>
+    <a href="cesta/" class="nav-link d-flex flex-column align-items-center text-center">
+      <i class="bi bi-cart-fill fs-4"></i>
+      <span class="d-block" style="font-size: 0.75rem;">Carrinho</span>
+    </a>
+    <a href="contato/" class="nav-link d-flex flex-column align-items-center text-center">
+      <i class="bi bi-envelope-fill fs-4"></i>
+      <span class="d-block" style="font-size: 0.75rem;">Contato</span>
+    </a>
+    <a href="historico/" class="nav-link d-flex flex-column align-items-center text-center">
+      <i class="bi bi-receipt-cutoff fs-4"></i>
+      <span class="d-block" style="font-size: 0.75rem;">Meus Pedidos</span>
+    </a>
   </nav>
+
 </header>
 
 <section class="content-section container my-4">

@@ -1,78 +1,88 @@
-/* Estilo geral do container */
-.container {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Container principal */
+.pedidos-historico {
+  max-width: 900px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 40px 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
 }
 
-/* Título centralizado e escuro */
-.container h3 {
-  color: #333333;
-  font-weight: bold;
+/* Título */
+.pedidos-historico h3 {
+  font-weight: 700;
+  color: #1f1f1f;
+  text-transform: uppercase;
   text-align: center;
-  margin-bottom: 1.5rem;
 }
 
-/* Spinner de carregamento */
-.spinner-border {
-  color: #6c757d; /* cinza suave */
+/* Spinner */
+.pedidos-historico .spinner-border {
+  color: #999;
 }
 
-/* Mensagem informativa */
-.alert-info {
+/* Mensagem de alerta */
+.pedidos-historico .alert-info {
+  border: 2px solid #d97706;
+  background-color: #fff7ed;
+  color: #b45309;
   font-weight: 600;
-  border-radius: 0.5rem;
+  text-align: center;
 }
 
-/* Accordion */
-.accordion-item {
-  border: 1px solid #dee2e6;
-  border-radius: 0.75rem;
+/* Accordion item */
+.pedidos-historico .accordion-item {
+  border: 2px solid #ccc;
+  border-radius: 6px;
   margin-bottom: 1rem;
-  overflow: hidden;
 }
 
-/* Cabeçalho do pedido (botão do accordion) */
-.accordion-button {
-  background-color: #f8f9fa;
-  font-weight: 500;
-  padding: 1rem 1.25rem;
-}
-
-/* Quando está aberto */
-.accordion-button:not(.collapsed) {
-  background-color: #e9ecef;
-  color: #000;
-}
-
-/* Detalhes internos do pedido */
-.accordion-body {
-  background-color: #ffffff;
-  padding: 1.5rem;
-}
-
-/* Título da seção de detalhes */
-.accordion-body h6 {
-  color: #666;
+/* Botão do accordion */
+.pedidos-historico .accordion-button {
+  background-color: #fdfdfd;
   font-weight: 600;
+  color: #1f1f1f;
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.pedidos-historico .accordion-button:not(.collapsed) {
+  background-color: #fff7ed;
+  color: #b45309;
+}
+
+/* Corpo do accordion */
+.pedidos-historico .accordion-body {
+  background-color: #ffffff;
+  padding: 1.25rem;
+}
+
+/* Título interno */
+.pedidos-historico .accordion-body h6 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 /* Lista de produtos */
-.list-group-item {
-  border: 1px solid #f1f1f1;
-  border-radius: 0.5rem;
+.pedidos-historico .list-group-item {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 /* Badge de valor */
-.badge.bg-primary {
-  background-color: #28a745 !important; /* Verde harmonizado */
-  font-size: 0.95rem;
-  padding: 0.6em 0.8em;
+.pedidos-historico .badge {
+  background-color: #d97706;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-/* Pequenas melhorias visuais */
-.text-success {
-  color: #28a745 !important;
+/* Texto verde de total */
+.pedidos-historico .text-success {
+  color: #15803d !important;
+  font-weight: 700;
 }

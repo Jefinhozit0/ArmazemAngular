@@ -23,16 +23,15 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-            ],
-            "styles": [
+            ],"styles": [
   "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "node_modules/bootstrap-icons/font/bootstrap-icons.css",
   "src/styles.css"
 ],
 
-
-          
-            
-            "scripts": [],
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
