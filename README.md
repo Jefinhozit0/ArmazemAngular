@@ -51,8 +51,8 @@ Siga os passos abaixo para obter uma cópia local do projeto e executá-la.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
+    git clone [https://github.com/Jefinhozit0/ArmazemAngular](https://github.com/Jefinhozit0/ArmazemAngular.git)
+    cd armazemanangular
     ```
 
 2.  **Instale as dependências do Backend:**
