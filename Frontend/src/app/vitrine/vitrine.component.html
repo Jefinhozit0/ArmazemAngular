@@ -1,37 +1,113 @@
-<div class="row g-4">
-  <div class="col-12 col-sm-6 col-md-4 col-lg-3"
-       *ngFor="let obj of (listaFiltrada.length > 0 ? listaFiltrada : lista); let i = index">
-    <div class="card h-100 shadow-sm produto-card"
-         #cardElement
-         [@fadeInOnScroll]="visibilidade[i] ? 'visible' : 'hidden'"
-         [attr.data-index]="i">
-         
-      <img [src]="'./assets/foto' + obj.codigo + '.jpg'" 
-           class="card-img-top produto-imagem" 
-           alt="{{obj.nome}}">
+<div class="container-fluid px-4 py-5">
+  <!-- Header Section -->
+  <div class="row mb-5">
+    <div class="col-12 text-center">
+      <h1 class="display-4 fw-bold mb-3 gradient-text">Armazém do Jota</h1>
+      <p class="lead text-muted">Descubra nossa seleção exclusiva de produtos com qualidade excepcional</p>
+    </div>
+  </div>
 
-      <div class="card-body d-flex flex-column">
-        <h5 class="card-title">{{ obj.nome }}</h5>
-
-        <div *ngIf="obj.quantidade > 0" class="text-success fw-bold">
-          R$ {{ obj.valor }}
-        </div>
-
-        <div *ngIf="obj.quantidade <= 0" class="text-danger fw-bold">
+  <!-- Products Grid -->
+  <div class="row g-4">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3"
+         *ngFor="let obj of (listaFiltrada.length > 0 ? listaFiltrada : lista); let i = index">
+      
+      <div class="card h-100 produto-card"
+           #cardElement
+           [@fadeInOnScroll]="visibilidade[i] ? 'visible' : 'hidden'"
+           [attr.data-index]="i"
+           [attr.data-low-stock]="obj.quantidade > 0 && obj.quantidade <= 5">
+           
+        <!-- Stock Badge -->
+        <div *ngIf="obj.quantidade <= 0" class="produto-badge out-of-stock">
+          <i class="fas fa-exclamation-triangle me-1"></i>
           Sem Estoque
         </div>
-
-        <div class="mt-auto d-flex flex-wrap gap-2 pt-3">
-          <button class="btn btn-detalhe btn-sm flex-fill" (click)="verDetalhe(obj)">
-            + Detalhes
-          </button>
-          <button class="btn btn-comprar btn-sm flex-fill"
-                  (click)="adicionar(obj)"
-                  [disabled]="obj.quantidade <= 0">
-            Comprar
-          </button>
+        <div *ngIf="obj.quantidade > 0 && obj.quantidade <= 5" class="produto-badge low-stock">
+          <i class="fas fa-exclamation-triangle me-1"></i>
+          Últimas {{obj.quantidade}}
         </div>
 
+        <!-- Image Container -->
+        <div class="produto-image-container">
+          <img [src]="'./assets/foto' + obj.codigo + '.jpg'" 
+               class="card-img-top produto-imagem" 
+               alt="{{obj.nome}}">
+          
+          <!-- Image Overlay -->
+          <div class="produto-image-overlay"></div>
+        </div>
+
+        <div class="card-body d-flex flex-column">
+          <!-- Product Name -->
+          <h5 class="card-title mb-3">{{ obj.nome }}</h5>
+
+          <!-- Price Section -->
+          <div class="purodto-price-section mb-4">
+            <div *ngIf="obj.quantidade > 0" class="price-container">
+              <span class="current-price">R$ {{ obj.valor }}</span>
+              <span class="original-price">R$ {{ (obj.valor * 1.2).toFixed(2) }}</span>
+              <span class="discount-badge">-17%</span>
+            </div>
+
+            <div *ngIf="obj.quantidade <= 0" class="out-of-stock-price">
+              <i class="fas fa-exclamation-triangle me-2"></i>
+              Produto indisponível
+            </div>
+          </div>
+
+          <!-- Stock Info -->
+          <div class="stock-info mb-3" *ngIf="obj.quantidade > 0">
+            <div class="stock-indicator" 
+                 [class.high-stock]="obj.quantidade > 10"
+                 [class.medium-stock]="obj.quantidade > 5 && obj.quantidade <= 10"
+                 [class.low-stock]="obj.quantidade <= 5"></div>
+            <span class="stock-text">{{obj.quantidade}} unidades disponíveis</span>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="mt-auto produto-actions">
+            <button class="btn-detalhe" (click)="verDetalhe(obj)">
+  <i class="fas fa-eye me-2"></i>
+  <span>Detalhes</span>
+</button>
+
+<button class="btn-comprar"
+        (click)="adicionar(obj)"
+        [disabled]="obj.quantidade <= 0">
+  <i class="fas fa-shopping-cart me-2"></i>
+  <span>{{obj.quantidade <= 0 ? 'Indisponível' : 'Comprar'}}</span>
+</button>
+          </div>
+
+          <!-- Payment Info -->
+          <div class="payment-info mt-3" *ngIf="obj.quantidade > 0">
+            <div class="payment-option">
+              <i class="fas fa-credit-card text-primary me-2"></i>
+              <span>12x sem juros</span>
+            </div>
+            <div class="payment-option">
+              <i class="fas fa-qrcode text-success me-2"></i>
+              <span>5% off no PIX</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ripple Effect -->
+        <div class="ripple-effect"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Empty State -->
+  <div class="row" *ngIf="listaFiltrada.length === 0 && lista.length === 0">
+    <div class="col-12">
+      <div class="empty-state text-center py-5">
+        <div class="empty-icon mb-4">
+          <i class="fas fa-search fa-3x text-muted"></i>
+        </div>
+        <h3 class="empty-title mb-3">Nenhum produto encontrado</h3>
+        <p class="empty-description mb-4">Não há produtos disponíveis no momento</p>
       </div>
     </div>
   </div>

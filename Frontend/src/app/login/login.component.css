@@ -1,81 +1,140 @@
-/* Container do login */
+/* Container do login - Estilo Industrial Moderno */
 .login-container {
   max-width: 450px;
   background-color: #fff;
-  border: 2px solid #ccc;
-  padding: 30px;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid #e0e0e0;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  margin: 0 auto;
 }
 
 /* Título */
 .login-container h3 {
-  font-weight: bold;
-  color: #1f1f1f;
+  font-weight: 700;
+  color: #3a3a3a;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Labels */
 .login-container .form-label {
   font-weight: 600;
-  color: #333;
+  color: #5a5a5a;
+  margin-bottom: 8px;
 }
 
 /* Inputs */
 .login-container .form-control {
-  border: 2px solid #aaa;
-  border-radius: 3px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
   font-weight: 500;
+  padding: 12px 15px;
+  height: 48px;
+  transition: all 0.3s ease;
 }
 
 .login-container .form-control:focus {
-  border-color: #d97706;
-  box-shadow: none;
+  border-color: #8B5A2B;
+  box-shadow: 0 0 0 0.2rem rgba(139, 90, 43, 0.25);
 }
 
 /* Alerta de mensagem */
-.alert-warning {
-  background-color: #fff3cd;
-  border-left: 5px solid #d97706;
-  color: #856404;
+.login-container .alert-warning {
+  background-color: #fff7ed;
+  border: 1px solid #fde4c4;
+  border-left: 4px solid #8B5A2B;
+  color: #5a3d21;
   font-weight: 500;
+  border-radius: 6px;
+  padding: 12px;
 }
 
 /* Botão "Entrar" */
 .btn-entrar {
-  background-color: #1f1f1f;
+  background-color: #8B5A2B;
   color: #fff;
   border: none;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 .btn-entrar:hover {
-  background-color: #000;
+  background-color: #A67C52;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 90, 43, 0.2);
 }
 
 /* Botão "Esqueci minha senha" */
 .btn-esqueci {
-  background-color: #d97706;
-  color: #fff;
-  border: none;
+  background-color: transparent;
+  color: #8B5A2B;
+  border: 2px solid #8B5A2B;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 15px;
 }
 
 .btn-esqueci:hover {
-  background-color: #b45309;
+  background-color: rgba(139, 90, 43, 0.1);
+  color: #5a3d21;
 }
 
 /* Botão "Ainda não tenho cadastro" */
 .btn-cadastro {
-  background-color: #555;
+  background-color: #3a3a3a;
   color: #fff;
   font-weight: 600;
   border: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 15px;
 }
 
 .btn-cadastro:hover {
-  background-color: #333;
+  background-color: #5a5a5a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+.login-container a {
+  color: #8B5A2B;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+  color: #5a3d21;
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 30px 20px;
+  }
+  
+  .login-container h3 {
+    font-size: 1.5rem;
+  }
 }

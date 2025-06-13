@@ -1,48 +1,82 @@
-/* Caixa de pesquisa geral */
+/* Caixa de pesquisa - Estilo Industrial Moderno */
 .pesquisa-box {
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
+  position: relative;
 }
 
 /* Campo de texto */
 .pesquisa-box .form-control {
-  border: 2px solid #aaa;
+  border: 2px solid #A67C52;
   border-right: none;
-  border-radius: 3px 0 0 3px;
+  border-radius: 8px 0 0 8px;
   font-weight: 500;
   background-color: #fff;
-  color: #333;
+  color: #3a3a3a;
+  padding: 12px 20px;
+  height: 50px;
+  transition: all 0.3s ease;
 }
 
 .pesquisa-box .form-control:focus {
-  border-color: #d97706;
-  box-shadow: none;
+  border-color: #8B5A2B;
+  box-shadow: 0 0 0 0.2rem rgba(139, 90, 43, 0.25);
 }
 
 /* Botão "OK" */
 .pesquisa-box .btn-primary {
-  background-color: #d97706;
-  border: 2px solid #d97706;
+  background-color: #8B5A2B;
+  border: 2px solid #8B5A2B;
   color: #fff;
   font-weight: 600;
-  border-radius: 0;
+  border-radius: 0 8px 8px 0;
+  padding: 0 20px;
+  height: 50px;
+  transition: all 0.3s ease;
 }
 
 .pesquisa-box .btn-primary:hover {
-  background-color: #b45309;
-  border-color: #b45309;
+  background-color: #A67C52;
+  border-color: #A67C52;
 }
 
 /* Botão "Limpar" */
 .pesquisa-box .btn-secondary {
-  background-color: #555;
-  border: 2px solid #555;
+  background-color: #6c757d;
+  border: 2px solid #6c757d;
   color: #fff;
   font-weight: 600;
-  border-radius: 0 3px 3px 0;
+  border-radius: 8px;
+  margin-left: 10px;
+  padding: 0 20px;
+  height: 50px;
+  transition: all 0.3s ease;
 }
 
 .pesquisa-box .btn-secondary:hover {
-  background-color: #333;
-  border-color: #333;
+  background-color: #5a6268;
+  border-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+  .pesquisa-box {
+    flex-direction: column;
+  }
+  
+  .pesquisa-box .form-control {
+    border-radius: 8px;
+    border-right: 2px solid #A67C52;
+    margin-bottom: 10px;
+  }
+  
+  .pesquisa-box .btn-primary {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .pesquisa-box .btn-secondary {
+    margin-left: 0;
+  }
 }

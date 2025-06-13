@@ -1,55 +1,293 @@
-/* Reset básico */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-}
+/* CSS Moderno para Header de Armazém - Angular */
 
-/* Cabeçalho */
+/* Header Principal */
 .main-header {
-  background-color: #f0f0f0;
-  border-bottom: 3px solid #d4a017; /* amarelo forte estilo construção */
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
+/* Logo */
 .logo {
-  height: 100px;
-  object-fit: contain;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
+.logo:hover {
+  transform: scale(1.05);
+}
 
-/* Pesquisa */
-app-pesquisa {
-  max-width: 400px;
+/* Barra de Pesquisa */
+.search-container {
+  position: relative;
+  flex-grow: 1;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px 12px 48px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 14px;
+  color: #334155;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background: white;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  width: 20px;
+  height: 20px;
+  transition: color 0.2s ease;
+}
+
+.search-input:focus + .search-icon {
+  color: #3b82f6;
 }
 
 /* Navegação */
-.nav-menu .nav-link {
-  color: #333;
+.nav-menu {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 16px;
   text-decoration: none;
-  font-weight: 600;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  color: #64748b;
+  position: relative;
 }
 
-.nav-menu .nav-link:hover {
-  background-color: #d4a017;
-  color: #fff;
+.nav-link:hover {
+  background: #f8fafc;
+  transform: translateY(-2px) scale(1.05);
+  text-decoration: none;
+  color: #1e293b;
 }
 
-/* Conteúdo */
+.nav-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Ícones específicos por seção */
+.nav-link[href*="vitrine"] i {
+  color: #3b82f6;
+}
+
+.nav-link[href*="login"] i {
+  color: #10b981;
+}
+
+.nav-link[href*="cesta"] i {
+  color: #f59e0b;
+}
+
+.nav-link[href*="contato"] i {
+  color: #8b5cf6;
+}
+
+.nav-link[href*="historico"] i {
+  color: #6366f1;
+}
+
+.nav-link i {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover i {
+  transform: scale(1.1);
+}
+
+.nav-link span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+/* Content Section */
 .content-section {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
+  min-height: calc(100vh - 200px);
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #eff6ff 100%);
+  padding: 2rem 0;
 }
 
-/* Rodapé */
+/* Footer */
 .main-footer {
-  background-color: #1f1f1f;
-  color: #f8f9fa;
-  font-size: 0.9rem;
-  border-top: 3px solid #d4a017;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  position: relative;
+}
+
+.main-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: #64748b;
+    transition: all 0.2s ease;
+  }
+  
+  .mobile-menu-toggle:hover {
+    background: #f8fafc;
+    color: #1e293b;
+  }
+  
+  .mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.2s ease;
+  }
+  
+  .mobile-nav .nav-link {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 12px;
+    margin-bottom: 4px;
+    border-radius: 12px;
+  }
+  
+  .mobile-nav .nav-link i {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+  
+  .search-container {
+    max-width: none;
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-header {
+    padding: 0.75rem;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .search-input {
+    padding: 10px 14px 10px 40px;
+    font-size: 14px;
+  }
+  
+  .search-icon {
+    left: 14px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Animações */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estados de hover melhorados */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: all 0.2s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+/* Melhorias de acessibilidade */
+.nav-link:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.search-input:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Efeitos de glassmorphism */
+.main-header {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Gradientes sutis para profundidade */
+.content-section {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.05) 0%, transparent 50%),
+    linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
 }

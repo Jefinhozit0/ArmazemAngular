@@ -1,47 +1,159 @@
-/* Exemplo de personalização global */
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa; /* cinza claro do Bootstrap */
-  color: #212529; /* cor padrão do Bootstrap */
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5; /* Um tom mais suave que combina com nosso tema */
+  color: #333333; /* Cor mais escura para melhor contraste */
+  line-height: 1.6;
 }
 
-/* Personalizar links com cores do Bootstrap */
+/* Personalizar links com cores temáticas */
 a {
-  color: #0d6efd;
+  color: #8B5A2B; /* Cor principal do tema - tom de madeira */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #0a58ca;
+  color: #A67C52; /* Tom mais claro da cor principal */
   text-decoration: underline;
 }
 
-/* Botões customizados para ter borda arredondada */
+/* Botões customizados - consistente com a vitrine */
 .btn {
-  border-radius: 0.5rem;
+  border-radius: 8px;
   font-weight: 600;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #8B5A2B;
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #0a58ca;
-  box-shadow: 0 0 10px rgba(13, 110, 253, 0.5);
+  background-color: #A67C52;
+  box-shadow: 0 4px 8px rgba(139, 90, 43, 0.3);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
 }
 
 /* Inputs com foco personalizado */
+.form-control {
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #ced4da;
+  transition: all 0.3s ease;
+}
+
 .form-control:focus {
-  border-color: #0d6efd;
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  border-color: #8B5A2B;
+  box-shadow: 0 0 0 0.2rem rgba(139, 90, 43, 0.25);
 }
 
-/* Container padrão para centralizar e limitar largura */
+/* Container padrão com padding ajustado */
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
+  padding: 20px;
 }
 
-/* Responsividade já gerenciada pelo Bootstrap, mas pode personalizar */
+/* Cabeçalhos com estilo temático */
+h1, h2, h3, h4, h5, h6 {
+  color: #3a3a3a;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Efeitos de transição para elementos interativos */
+button, .btn, a {
+  transition: all 0.3s ease;
+}
+
+/* Barra de navegação temática */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #8B5A2B !important;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #495057 !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: #8B5A2B !important;
+  background-color: rgba(139, 90, 43, 0.1);
+}
+
+/* Rodapé temático */
+footer {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #A67C52;
+}
+
+footer a:hover {
+  color: #d4b79a;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
   body {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    padding: 8px 15px;
     font-size: 14px;
+  }
+  
+  .form-control {
+    padding: 8px 12px;
   }
 }
